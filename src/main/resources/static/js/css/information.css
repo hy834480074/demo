@@ -1,0 +1,23 @@
+
+.ak47{
+	width:100%;
+	height:100%;
+	position:absolute;
+	background-image:url("../photo/4.jpg");
+	background-size:cover;
+	background-size:fixed;
+	
+}
+table{
+	text-shadow:-1px -1px 0px #E6CAFF; 
+	background: rgba(216,216,216,0.1);
+	border-radius:25px;
+	text-align: center;
+	position: absolute;
+	top: 30%;
+	left:50%;
+	transform:translateX(-50%); 
+}
+td{
+	padding: 5px;
+}
