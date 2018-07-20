@@ -5,8 +5,6 @@ import com.example.demo.entity.Area;
 import com.example.demo.enums.MyEnum;
 import com.example.demo.exception.AreaException;
 import com.example.demo.service.AreaSercice;
-import com.github.pagehelper.PageHelper;
-import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
@@ -92,17 +90,4 @@ public class AreaServiceImpl implements AreaSercice {
     }
 
 
-    /**
-     * 分特
-     * @param pageNum
-     * @param pageSize
-     * @return
-     */
-    public PageInfo<Area> lookPageAll(int pageNum, int pageSize){
-        PageHelper.startPage(pageNum, pageSize);
-        List<Area> list =  areaDao.queryArea();
-        PageInfo<Area> p = new PageInfo<>(list);
-        System.out.println(p);
-        return p;
-    }
 }

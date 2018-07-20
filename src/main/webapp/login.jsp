@@ -7,52 +7,21 @@
 <link href="/js/bootstrap-3.3.7-dist/css/bootstrap-theme.css" rel="stylesheet">
 <link href="/js/bootstrap-3.3.7-dist/css/bootstrap-theme.min.css" rel="stylesheet">
 <link href="/js/bootstrap-3.3.7-dist/css/bootstrap.css" rel="stylesheet">
-<link href="/js/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="/js/bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+<link type="text/css" href="/js/css/main.css" rel="stylesheet">
+<link type="text/css" href="/js/css/0001245c2.css" rel="stylesheet">
 <link href="/js/css/login.css" rel="stylesheet">
-<script type="text/javascript" src="/js/jquery-1.7.2.js"></script>
-<script type="text/javascript">
- 	$(function(){
- 			function set(set,st){
- 			$("form").attr(set,st);
-			$("form").submit();
- 			}
-		$(":button").click(function(){
-			var name = $(":text[name='name']").val();
-			var password = $(":text[name='password']").val();
-			var choose = $(this).text();
-			$.ajax({
-				url:"user/login",
-				type:"post",
-				dataType:"text",
-				data:{
-					"choose":choose,
-					"name":name,
-					"password":password
-				},
-				success:function(data){
-					if(data==="success"){
-						set("action","user/lookAll")
-					}else if(data==="sb"){
-						alert("账号密码错误")
-						set("action","user/back")
-					}else{
-						set("action","user/register")
-					}
-				}
-			})
-		})
-	}) 
-</script>
+<script type="text/javascript" src="/js/js/login.js"></script>
 
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>Insert title here</title>
 </head>
 <body>
-	<div class="coco">
+<div id="e_background">
+	<div id="e_smallstars"></div>
+</div>
 	
 	<form action="javascript:void(0)">
-	<table class="table table-condensed" id="ooxxx">
+	<table id="ooxxx" cellpadding="10">
 		<tr>
 			<td>
 		 		<label for="exampleInputEmail1">请输入账户：</label><br>
@@ -117,6 +86,5 @@
 			<rect x="132" y="170" width="60" height="1" fill="#000000"></rect>
 			</svg>
 	</div>
-</div>
 </body>
 </html>

@@ -3,17 +3,13 @@ package com.example.demo.controller;
 
 import com.example.demo.entity.Area;
 import com.example.demo.service.impl.AreaServiceImpl;
-import com.github.pagehelper.PageInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
 
-import javax.servlet.http.HttpSession;
-import java.lang.reflect.Method;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -29,6 +25,7 @@ public class AreaController {
         List<Area> list = areaService.getAreaList();
         model.addAttribute("lists",list);
         return "lookAllArea";
+
     }
 
     @RequestMapping(value = "/getareabyid",method = RequestMethod.GET)
@@ -63,13 +60,6 @@ public class AreaController {
         return modelMap;
     }
 
-
-    @RequestMapping(value = "/page")
-    public String pageAll(int pageNum, int pugeSize, Model model){
-        PageInfo<Area> areaPageInfo = areaService.lookPageAll(pageNum, pugeSize);
-        model.addAttribute("pageAll",areaPageInfo);
-        return "page";
-    }
 
 
 }

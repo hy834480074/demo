@@ -67,10 +67,4 @@ public class AreaDaoTest {
         areaSercice.addArea(area);
     }
 
-    //  测试分页
-    @Test
-    public void lookAllPage() {
-        areaSercice.lookPageAll(0,3);
-
-    }
 }

@@ -1,7 +1,6 @@
 package com.example.demo.service;
 
 import com.example.demo.entity.Area;
-import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
@@ -40,11 +39,4 @@ public interface AreaSercice {
      */
     boolean deleteArea(int areaId);
 
-    /**
-     * 分页查询
-     * @param pageNum
-     * @param pageSize
-     * @return
-     */
-    public PageInfo<Area> lookPageAll(int pageNum, int pageSize);
 }
